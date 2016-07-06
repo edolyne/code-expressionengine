@@ -1,0 +1,36 @@
+{
+    "name": "ee",
+    "displayName": "ExpressionEngine",
+    "description": "ExpressionEngine syntax highlighting",
+    "version": "0.0.1",
+    "publisher": "Edolyne Long",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/edolyne/code-expressionengine.git"
+    },
+    "engines": {
+        "vscode": "^1.0.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "extensionDependencies": [
+        "html"
+    ],
+    "icon": "icon.svg",
+    "contributes": {
+        "languages": [{
+            "id": "ee",
+            "aliases": ["ExpressionEngine", "ee", "html", "xml"],
+            "extensions": [".html",".feed"],
+            "mimetypes": ["text/html", "text/x-jshtm", "text/template", "text/ng-template", "application/xhtml+xml"],
+            "configuration": "./ee.configuration.json"
+        }],
+        "grammars": [{
+            "language": "ee",
+            "scopeName": "text.html.ee",
+            "path": "./syntaxes/ee.tmLanguage"
+        }]
+    }
+}
