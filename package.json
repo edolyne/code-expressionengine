@@ -2,13 +2,8 @@
     "name": "ee",
     "displayName": "ExpressionEngine",
     "description": "ExpressionEngine syntax highlighting",
-    "version": "0.0.1",
-    "publisher": "Edolyne Long",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/edolyne/code-expressionengine.git"
-    },
+    "version": "0.1.0",
+    "publisher": "EdolyneLong",
     "engines": {
         "vscode": "^1.0.0"
     },
@@ -16,19 +11,33 @@
         "Languages"
     ],
     "extensionDependencies": [
-        "html"
+        "html","xml"
     ],
+    "files.associations": {
+        "*.html": "html",
+        "*.feed": "xml"
+    },
     "icon": "icon.svg",
     "contributes": {
         "languages": [{
-            "id": "ee",
+            "id": "html",
             "aliases": ["ExpressionEngine", "ee", "html", "xml"],
-            "extensions": [".html",".feed"],
+            "extensions": [".html"],
+            "mimetypes": ["text/html", "text/x-jshtm", "text/template", "text/ng-template", "application/xhtml+xml"],
+            "configuration": "./ee.configuration.json"
+        },{
+            "id": "xml",
+            "aliases": ["ExpressionEngine", "ee", "html", "xml"],
+            "extensions": [".feed"],
             "mimetypes": ["text/html", "text/x-jshtm", "text/template", "text/ng-template", "application/xhtml+xml"],
             "configuration": "./ee.configuration.json"
         }],
         "grammars": [{
-            "language": "ee",
+            "language": "html",
+            "scopeName": "text.html.ee",
+            "path": "./syntaxes/ee.tmLanguage"
+        },{
+            "language": "xml",
             "scopeName": "text.html.ee",
             "path": "./syntaxes/ee.tmLanguage"
         }]
