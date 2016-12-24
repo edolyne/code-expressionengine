@@ -11,33 +11,32 @@
         "Languages"
     ],
     "extensionDependencies": [
-        "html","xml"
+        "html",
+        "xml"
     ],
-    "files.associations": {
-        "*.html": "html",
-        "*.feed": "xml"
-    },
     "icon": "icon.svg",
     "contributes": {
         "languages": [{
-            "id": "html",
-            "aliases": ["ExpressionEngine", "ee", "html", "xml"],
-            "extensions": [".html"],
-            "mimetypes": ["text/html", "text/x-jshtm", "text/template", "text/ng-template", "application/xhtml+xml"],
-            "configuration": "./ee.configuration.json"
-        },{
-            "id": "xml",
-            "aliases": ["ExpressionEngine", "ee", "html", "xml"],
-            "extensions": [".feed"],
-            "mimetypes": ["text/html", "text/x-jshtm", "text/template", "text/ng-template", "application/xhtml+xml"],
+            "id": "ee",
+            "aliases": [
+                "HTML (ExpressionEngine)",
+                "ee"
+            ],
+            "extensions": [
+                ".html",
+                ".feed"
+            ],
+            "mimetypes": [
+                "text/html",
+                "text/x-jshtm",
+                "text/template",
+                "text/ng-template",
+                "application/xhtml+xml"
+            ],
             "configuration": "./ee.configuration.json"
         }],
         "grammars": [{
-            "language": "html",
-            "scopeName": "text.html.ee",
-            "path": "./syntaxes/ee.tmLanguage"
-        },{
-            "language": "xml",
+            "language": "ee",
             "scopeName": "text.html.ee",
             "path": "./syntaxes/ee.tmLanguage"
         }]
